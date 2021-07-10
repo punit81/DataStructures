@@ -3,7 +3,7 @@ class Solution {
     	if(lists.length==1){
             return lists[0];
         }
-        int half=lists.length/2,i=0,full=lists.length,k=0;
+        int half=lists.length/2,i=0,full=lists.length;
         ListNode nextnode=null,prevnode=null;
         while(half!=0){
             i=0;
