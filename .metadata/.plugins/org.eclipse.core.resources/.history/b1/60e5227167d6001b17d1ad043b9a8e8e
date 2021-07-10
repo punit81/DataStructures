@@ -1,0 +1,25 @@
+package BinarySearchTree;
+
+import BinaryNode.BNode;
+
+public class BST extends BNode{
+	public BST() {
+		super();
+	}
+	public void insert(int data) {
+		if(IsEmpty()) {
+			this.setData(data);
+			return;
+		}
+		if(data>=this.getData()) {
+			if(this.getRight()==null) {
+				BST right=new BST();
+				right.setData(data);
+				this.setRight(right);
+			}
+			else {
+				((BST)this.getRight()).insert(data);
+			}
+		}
+	}
+}
